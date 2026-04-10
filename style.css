@@ -1,0 +1,50 @@
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --accent:#0b74de;
+  --text:#222;
+  --muted:#666;
+  --container:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Noto Sans KR", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--container);margin:0 auto;padding:1.25rem}
+.site-header{background:var(--card);box-shadow:0 1px 8px rgba(15,20,30,0.06);position:sticky;top:0;z-index:10}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand h1{margin:0;font-size:1.25rem}
+.brand .sub{margin:0;color:var(--muted);font-size:0.9rem}
+.nav a{margin-left:1rem;color:var(--text);text-decoration:none;font-weight:600}
+.section{padding:3rem 0}
+.about .lead{font-size:1.05rem;color:var(--muted);margin-bottom:1rem}
+.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.profile-grid h3{margin-top:0}
+.projects .project-card{background:var(--card);padding:1.25rem;border-radius:10px;box-shadow:0 6px 18px rgba(12,20,40,0.06)}
+.project-meta h3{margin:0}
+.muted{color:var(--muted);font-size:0.95rem}
+.project-actions{margin-top:0.75rem}
+.btn{display:inline-block;padding:0.5rem 0.9rem;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;border:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.stats{display:flex;gap:1rem;margin-top:1rem}
+.stats > div{background:var(--card);padding:0.75rem;border-radius:8px;flex:1;text-align:center}
+.stats strong{display:block;font-size:1rem}
+.stats span{display:block;color:var(--muted);margin-top:0.5rem}
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted);font-size:0.95rem}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.45)}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{background:var(--card);padding:1rem;border-radius:10px;max-width:720px;width:90%;position:relative}
+.modal-close{position:absolute;right:0.5rem;top:0.5rem;border:none;background:transparent;font-size:1.1rem;cursor:pointer}
+
+/* Responsive */
+@media (max-width:900px){
+  .profile-grid{grid-template-columns:1fr}
+  .nav{display:none}
+}
